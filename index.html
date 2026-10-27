@@ -3,58 +3,185 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#111018">
-<meta name="description" content="Một góc nhỏ giới thiệu về mình, những điều mình yêu thích và các dự án đang thực hiện.">
-<title>Ngày Tình Phôi Phai — Một chút về mình</title>
+<meta name="theme-color" content="#171421">
+<meta name="description" content="Trần Nguyễn Minh Tân — một hành trình, những thế giới yêu thích và một trang sách mới đang được viết tiếp.">
+<title>Ngày Tình Phôi Phai — Một trang sách mới</title>
 <style>
-:root{--bg:#111018;--panel:#1a1823;--text:#f7f2f5;--muted:#b8afc2;--pink:#f3a6c8;--lilac:#bca7ff;--line:#ffffff18}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 12% 0%,#39223b 0,transparent 36%),radial-gradient(ellipse at 90% 24%,#242447 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}.brand{font-weight:800;letter-spacing:.08em;font-size:.88rem}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.9rem}.navlinks a:hover{color:var(--pink)}.hero{min-height:76vh;display:grid;align-items:center;padding:88px 0 100px;position:relative;overflow:hidden}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--pink);font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.dot{width:7px;height:7px;background:var(--pink);border-radius:50%;box-shadow:0 0 18px var(--pink)}h1{font-size:clamp(3rem,8vw,6.6rem);line-height:1.02;letter-spacing:-.065em;max-width:850px;margin:22px 0}.gradient{background:linear-gradient(100deg,#fff 8%,var(--pink) 48%,var(--lilac) 92%);-webkit-background-clip:text;background-clip:text;color:transparent}.intro{font-size:clamp(1rem,2vw,1.2rem);color:var(--muted);max-width:620px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:999px;border:1px solid var(--line);font-weight:700;font-size:.92rem;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-3px)}.primary{background:var(--pink);color:#21121d;border-color:transparent}.ghost:hover{background:#ffffff0c}.orb{position:absolute;width:300px;height:300px;border-radius:50%;right:4%;top:22%;background:linear-gradient(135deg,#f3a6c82b,#bca7ff25);filter:blur(2px);border:1px solid #ffffff12;pointer-events:none}.orb:before,.orb:after{content:"";position:absolute;border:1px solid #ffffff16;border-radius:50%;inset:25px}.orb:after{inset:55px}.section{padding:76px 0;border-top:1px solid var(--line)}.section-kicker{color:var(--pink);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800}.section h2{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.045em;line-height:1.15;margin:10px 0 16px}.lead{color:var(--muted);max-width:650px;margin:0 0 30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:24px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#ffffff08,#ffffff03);min-height:190px;transition:transform .25s,border-color .25s}.card:hover{transform:translateY(-5px);border-color:#f3a6c866}.icon{font-size:1.6rem}.card h3{margin:14px 0 7px;font-size:1.12rem}.card p{margin:0;color:var(--muted);font-size:.94rem}.about-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}.quote{font-size:clamp(1.5rem,3vw,2.4rem);font-weight:750;line-height:1.3;letter-spacing:-.035em}.quote span{color:var(--pink)}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{padding:18px;border-radius:16px;background:#ffffff08;border:1px solid var(--line)}.fact strong{display:block;margin-bottom:4px}.fact span{color:var(--muted);font-size:.9rem}.project-card{display:flex;flex-direction:column;gap:12px}.tag{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--lilac);font-weight:800}.project-card h3{font-size:1.2rem;margin:0}.project-card p{flex:1}.text-link{color:var(--pink);font-weight:750;font-size:.9rem}.contact{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:32px;border:1px solid #f3a6c84a;background:linear-gradient(120deg,#f3a6c812,#bca7ff0b);border-radius:24px}.contact h2{margin:4px 0 8px}.contact p{margin:0;color:var(--muted)}footer{padding:28px 0;color:#8f8799;font-size:.85rem;display:flex;justify-content:space-between;gap:12px}.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}.reveal:nth-child(2){transition-delay:.12s}.reveal:nth-child(3){transition-delay:.24s}
-@media(max-width:760px){.navlinks{gap:12px;font-size:.8rem}.orb{width:190px;height:190px;right:-60px;top:16%;opacity:.7}.hero{min-height:70vh;padding:72px 0}.grid{grid-template-columns:1fr}.card{min-height:0}.about-layout{grid-template-columns:1fr;gap:24px}.contact{align-items:flex-start;flex-direction:column}.section{padding:58px 0}}
-@media(max-width:460px){.wrap{width:min(100% - 28px,1080px)}.nav{align-items:flex-start;gap:12px}.navlinks{gap:9px;flex-wrap:wrap;justify-content:flex-end}.brand{font-size:.75rem}.facts{grid-template-columns:1fr}footer{flex-direction:column}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+:root{color-scheme:dark;--bg:#171421;--bg2:#211a30;--panel:#211c2c;--panel2:#292137;--text:#f4effb;--muted:#c1b7d2;--soft:#988ba9;--lilac:#c6b4f4;--line:#e8dcff24;--glow:#a78bfa}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:radial-gradient(ellipse at 50% -12%,#453056 0,transparent 44%),radial-gradient(ellipse at 95% 38%,#272444 0,transparent 28%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.75;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(120deg,transparent 20%,#c5b0ff05 48%,transparent 75%)}
+a{color:inherit;text-decoration:none}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+::selection{background:#b9a1e8;color:#171421}
+.wrap{width:min(1080px,calc(100% - 40px));margin-inline:auto}
+.serif,h1,h2,.quote,.chapter-number{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+.nav{position:sticky;top:0;z-index:10;background:#171421d9;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-inner{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-size:.84rem;letter-spacing:.13em;text-transform:uppercase;font-weight:750}
+.brand span{color:var(--lilac)}
+.navlinks{display:flex;gap:22px;color:var(--muted);font-size:.88rem}
+.navlinks a{transition:color .2s}
+.navlinks a:hover,.navlinks a:focus-visible{color:var(--lilac)}
+.menu-button{display:none;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:12px;padding:8px 12px}
+.hero{min-height:calc(90svh - 70px);display:grid;place-items:center;position:relative;text-align:center;padding:100px 0 110px;isolation:isolate}
+.hero:before,.hero:after{content:"";position:absolute;pointer-events:none;border-radius:50%;filter:blur(1px);z-index:-1}
+.hero:before{width:min(62vw,650px);aspect-ratio:1;border:1px solid #c6b4f41a;box-shadow:0 0 100px #a78bfa0b,inset 0 0 100px #a78bfa08;animation:halo 12s ease-in-out infinite alternate}
+.hero:after{width:9px;height:9px;background:#e9dfff;box-shadow:0 0 24px 6px #c6b4f44d;transform:translate(210px,-130px)}
+.eyebrow{font-size:.75rem;letter-spacing:.23em;text-transform:uppercase;color:var(--lilac);font-weight:700}
+.hero h1{font-size:clamp(2.8rem,7.8vw,6.7rem);line-height:1.08;letter-spacing:-.045em;max-width:950px;margin:24px auto 20px;text-wrap:balance}
+.hero h1 span{display:block;color:var(--lilac);font-style:italic}
+.hero-copy{max-width:650px;margin:0 auto;color:var(--muted);font-size:clamp(1rem,2vw,1.13rem)}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:34px}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 19px;border:1px solid #c6b4f46b;border-radius:999px;background:#c6b4f414;color:var(--text);transition:transform .25s,border-color .25s,background .25s}
+.button.primary{background:var(--lilac);color:#20172c;border-color:var(--lilac);font-weight:750}
+.button:hover{transform:translateY(-2px);border-color:var(--lilac);background:#c6b4f425}
+.button.primary:hover{background:#d6c8fa}
+.scroll-note{position:absolute;bottom:27px;left:50%;transform:translateX(-50%);font-size:.75rem;color:var(--soft);letter-spacing:.12em;text-transform:uppercase}
+.scroll-note:after{content:"";display:block;height:26px;width:1px;background:linear-gradient(var(--lilac),transparent);margin:8px auto 0}
+.chapter{padding:100px 0;border-top:1px solid var(--line)}
+.chapter-head{display:grid;grid-template-columns:100px 1fr;gap:20px;align-items:start;margin-bottom:38px}
+.chapter-number{font-size:2.4rem;color:var(--lilac);line-height:1}
+.chapter-kicker{color:var(--lilac);font-size:.74rem;text-transform:uppercase;letter-spacing:.2em;font-weight:750}
+h2{font-size:clamp(2rem,4.6vw,3.7rem);line-height:1.15;letter-spacing:-.025em;margin:7px 0 12px}
+.lead{max-width:720px;color:var(--muted);margin:0;font-size:1.04rem}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.panel{border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,34px);background:linear-gradient(145deg,#ffffff07,#ffffff02);box-shadow:0 18px 60px #08060f12}
+.panel h3{font-size:1.2rem;margin:0 0 12px}
+.big-quote{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.65rem,3.3vw,2.5rem);line-height:1.35;color:#e9dfff;margin:12px 0 18px}
+.muted{color:var(--muted)}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.pill{border:1px solid var(--line);border-radius:999px;padding:6px 11px;font-size:.82rem;color:#ddd2ef;background:#ffffff04}
+.interest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.interest{position:relative;overflow:hidden;min-height:220px}
+.interest .symbol{font-size:1.5rem;color:var(--lilac);margin-bottom:25px}
+.interest h3{font-family:Georgia,"Times New Roman",serif;font-size:1.55rem;font-weight:400;margin:0 0 8px}
+.interest p{margin:0;color:var(--muted);font-size:.94rem}
+.interest:after{content:"";position:absolute;width:140px;height:140px;border:1px solid #c6b4f414;border-radius:50%;right:-64px;bottom:-68px}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.project{display:flex;flex-direction:column;min-height:260px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.project:hover{transform:translateY(-5px);border-color:#c6b4f46b;box-shadow:0 18px 55px #08060f35}
+.project-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px}
+.project-icon{display:grid;place-items:center;width:48px;height:48px;border:1px solid #c6b4f43b;border-radius:15px;color:var(--lilac);font-size:1.25rem}
+.status{font-size:.73rem;color:#d9c9f4;border:1px solid #c6b4f43b;border-radius:999px;padding:5px 9px}
+.project h3{font-size:1.4rem;margin:0 0 8px}
+.project p{color:var(--muted);margin:0 0 20px;font-size:.94rem}
+.project-link{margin-top:auto;color:var(--lilac);font-size:.9rem;font-weight:700;display:inline-flex;gap:8px;align-items:center}
+.project-link:hover{text-decoration:underline}
+.study-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.study-item{padding:20px;border-left:2px solid #c6b4f45e;background:#ffffff04;border-radius:0 14px 14px 0}
+.study-item h3{font-size:1rem;margin:0 0 7px}
+.study-item p{margin:0;color:var(--muted);font-size:.9rem}
+.goal{position:relative;overflow:hidden;text-align:center;padding:clamp(30px,6vw,66px);border:1px solid #c6b4f43d;border-radius:28px;background:radial-gradient(ellipse at 50% 0%,#7c5aa529,transparent 65%),#ffffff03}
+.goal h2{max-width:760px;margin:15px auto}
+.goal p{max-width:650px;margin:0 auto;color:var(--muted)}
+.footer{padding:35px 0 45px;border-top:1px solid var(--line);color:var(--soft);font-size:.83rem}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer a{color:var(--muted)}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.delay-1{transition-delay:.1s}.delay-2{transition-delay:.18s}.delay-3{transition-delay:.26s}
+@keyframes halo{from{transform:scale(.96);opacity:.55}to{transform:scale(1.04);opacity:1}}
+@media(max-width:760px){.nav-inner{min-height:64px}.menu-button{display:block}.navlinks{display:none;position:absolute;left:20px;right:20px;top:58px;padding:16px;background:#211a30f5;border:1px solid var(--line);border-radius:16px;flex-direction:column;gap:12px}.navlinks.open{display:flex}.hero{min-height:78svh;padding:78px 0 90px}.hero:after{transform:translate(120px,-115px)}.chapter{padding:72px 0}.chapter-head{grid-template-columns:54px 1fr;gap:13px}.chapter-number{font-size:1.8rem}.about-grid{grid-template-columns:1fr}.interest-grid{grid-template-columns:1fr}.interest{min-height:auto}.interest .symbol{margin-bottom:12px}.project-grid{grid-template-columns:1fr}.study-grid{grid-template-columns:1fr}.scroll-note{bottom:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<header class="wrap nav">
-<a class="brand" href="#home">NGÀY TÌNH PHÔI PHAI ✳</a>
-<nav class="navlinks" aria-label="Điều hướng chính"><a href="#about">Về mình</a><a href="#interests">Sở thích</a><a href="#projects">Dự án</a><a href="#contact">Liên hệ</a></nav>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Về đầu trang">TANKONGU <span>✦</span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="navlinks">Mục lục ☰</button>
+    <nav class="navlinks" id="navlinks" aria-label="Điều hướng chính">
+      <a href="#about">Tôi là ai</a><a href="#interests">Thế giới của tôi</a><a href="#projects">Dự án</a><a href="#journey">Hành trình</a><a href="#next">Chương tiếp theo</a>
+    </nav>
+  </div>
 </header>
-<main>
-<section class="wrap hero" id="home">
-<div class="orb" aria-hidden="true"></div>
-<div class="hero-content reveal">
-<div class="eyebrow"><span class="dot"></span> Một góc nhỏ của riêng mình</div>
-<h1>Xin chào,<br>mình là <span class="gradient">một người đang lớn.</span></h1>
-<p class="intro">Mình thích khám phá những ý tưởng mới, sáng tạo những thứ của riêng mình và biến những điều tò mò thành dự án thật. Đây là nơi lưu lại một chút về con người mình, những điều mình thích và hành trình mình đang đi.</p>
-<div class="actions"><a class="btn primary" href="#about">Khám phá về mình ↘</a><a class="btn ghost" href="#projects">Xem dự án</a></div>
-</div>
-</section>
-<section class="section" id="about"><div class="wrap about-layout">
-<div class="reveal"><div class="section-kicker">01 / Về mình</div><div class="quote">“Không cần phải biết hết mọi thứ — chỉ cần luôn <span>muốn học thêm</span> một điều gì đó.”</div></div>
-<div class="reveal"><h2>Mình đang trên hành trình của riêng mình.</h2><p class="lead">Mình là người thích tìm hiểu cách mọi thứ hoạt động, từ những ý tưởng trong đầu đến các sản phẩm có thể tự tay xây dựng. Mình vẫn đang khám phá bản thân, học hỏi từng ngày và thử sức với nhiều điều mới.</p>
-<div class="facts"><div class="fact"><strong>✦ Tò mò</strong><span>Luôn muốn tìm hiểu sâu hơn.</span></div><div class="fact"><strong>✦ Sáng tạo</strong><span>Thích nghĩ ra ý tưởng và cách làm riêng.</span></div><div class="fact"><strong>✦ Kiên trì</strong><span>Thử, sửa, rồi làm tốt hơn.</span></div><div class="fact"><strong>✦ Đang phát triển</strong><span>Mỗi trải nghiệm đều là một bài học.</span></div></div></div>
-</div></section>
-<section class="section" id="interests"><div class="wrap"><div class="reveal"><div class="section-kicker">02 / Những điều mình thích</div><h2>Thế giới của mình có gì?</h2><p class="lead">Một vài mảng mình muốn dành thời gian để khám phá và phát triển thêm.</p></div>
-<div class="grid">
-<article class="card reveal"><div class="icon">💻</div><h3>Lập trình & công nghệ</h3><p>Thử sức với website, tìm hiểu công nghệ và biến ý tưởng thành thứ có thể sử dụng được.</p></article>
-<article class="card reveal"><div class="icon">🎲</div><h3>Thiết kế trò chơi</h3><p>Xây dựng luật chơi, nhân vật, thế giới và những lựa chọn khiến mỗi lần chơi trở nên khác biệt.</p></article>
-<article class="card reveal"><div class="icon">📚</div><h3>Học hỏi & sáng tạo</h3><p>Tìm cách học hiệu quả hơn, ghi lại ý tưởng và không ngại thử một hướng đi mới.</p></article>
-</div></div></section>
-<section class="section" id="projects"><div class="wrap"><div class="reveal"><div class="section-kicker">03 / Góc dự án</div><h2>Những thứ mình đang làm.</h2><p class="lead">Một vài ý tưởng và sản phẩm thể hiện cách mình học hỏi, thử nghiệm và sáng tạo.</p></div>
-<div class="grid">
-<article class="card project-card reveal"><div class="tag">Website · Học tập</div><h3>Học Có Chiến Lược</h3><p>Một cẩm nang học tập hướng đến học sinh THPT, với các phương pháp học, kế hoạch và công cụ tập trung.</p><a class="text-link" href="https://tankongu.github.io/M-t-t-B-t/" target="_blank" rel="noreferrer">Xem website ↗</a></article>
-<article class="card project-card reveal"><div class="tag">Game design · Đang phát triển</div><h3>Thế giới trò chơi của mình</h3><p>Phát triển luật chơi, hệ thống nhân vật, kỹ năng và những thử thách để người chơi tự tạo nên câu chuyện.</p><span class="text-link">Đang hoàn thiện ✦</span></article>
-<article class="card project-card reveal"><div class="tag">Ý tưởng · Thử nghiệm</div><h3>Những điều sẽ đến</h3><p>Không phải ý tưởng nào cũng cần hoàn hảo ngay từ đầu. Đây là chỗ dành cho những dự án tiếp theo.</p><span class="text-link">To be continued…</span></article>
-</div></div></section>
-<section class="section" id="contact"><div class="wrap"><div class="contact reveal"><div><div class="section-kicker">04 / Kết nối</div><h2>Một lời chào cũng là khởi đầu.</h2><p>Cảm ơn bạn đã ghé qua góc nhỏ của mình.</p></div><a class="btn primary" href="https://github.com/Tankongu" target="_blank" rel="noreferrer">Ghé GitHub của mình ↗</a></div></div></section>
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero-content">
+      <div class="eyebrow">Một hành trình vẫn đang được viết tiếp</div>
+      <h1>Ngày tình phôi phai.<span>Lưỡng khai tân khởi.</span></h1>
+      <p class="hero-copy">Những điều tiêu cực và khó khăn không phải lúc nào cũng là dấu chấm hết. Đôi khi, chúng là trang giấy để ta bắt đầu viết nên một câu chuyện mới.</p>
+      <div class="hero-actions"><a class="button primary" href="#about">Bắt đầu hành trình <span aria-hidden="true">↘</span></a><a class="button" href="#projects">Khám phá những gì tôi làm</a></div>
+    </div>
+    <div class="scroll-note" aria-hidden="true">Cuộn để khám phá</div>
+  </section>
+  <section class="chapter" id="about">
+    <div class="wrap">
+      <div class="chapter-head reveal"><div class="chapter-number">01</div><div><div class="chapter-kicker">Người viết trang sách</div><h2>Tôi là ai?</h2><p class="lead">Một học sinh đang khám phá bản thân, nuôi dưỡng ý tưởng và từng bước xây dựng con đường của riêng mình.</p></div></div>
+      <div class="about-grid">
+        <article class="panel reveal"><div class="chapter-kicker">Tên trên trang sách</div><h3 style="font-size:clamp(1.8rem,4vw,2.8rem);margin-top:8px">Trần Nguyễn Minh Tân</h3><p class="muted">Bạn có thể gọi tôi là Mít tơ Bít, Tankongu hoặc Tân 1 Cú. Tôi thích giữ cho mình một chút bí ẩn, nhưng vẫn luôn sẵn sàng tìm hiểu điều mới và thử sức với những ý tưởng thú vị.</p><div class="pills"><span class="pill">Vui vẻ</span><span class="pill">Hòa nhã</span><span class="pill">Sáng tạo</span><span class="pill">Nhường nhịn</span><span class="pill">Thâm sâu khó lường</span></div></article>
+        <article class="panel reveal delay-1"><div class="chapter-kicker">Điều tôi tin</div><div class="big-quote">“Mỗi khó khăn đều có thể mở ra một trang sách mới.”</div><p class="muted">Với tôi, những điều không như ý có thể trở thành chất liệu cho sự trưởng thành. Điều quan trọng không chỉ là những gì đã xảy ra, mà còn là cách ta chọn viết tiếp câu chuyện của mình.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="chapter" id="interests">
+    <div class="wrap">
+      <div class="chapter-head reveal"><div class="chapter-number">02</div><div><div class="chapter-kicker">Những thế giới tôi yêu thích</div><h2>Nơi trí tưởng tượng bắt đầu</h2><p class="lead">Từ những thế giới không có thật đến những điều giản dị trong đời thường, mỗi sở thích đều mang lại một cách khám phá riêng.</p></div></div>
+      <div class="interest-grid">
+        <article class="panel interest reveal"><div class="symbol" aria-hidden="true">✧</div><h3>Những trang truyện</h3><p>Tôi yêu thích khoa học viễn tưởng và tiểu thuyết fantasy — nơi trí tưởng tượng có thể mở rộng đến những giới hạn mới.</p></article>
+        <article class="panel interest reveal delay-1"><div class="symbol" aria-hidden="true">⌘</div><h3>Thế giới game</h3><p>MOBA đem đến những màn phối hợp và chiến thuật; game thế giới mở cho tôi tự do khám phá theo cách của mình.</p></article>
+        <article class="panel interest reveal delay-2"><div class="symbol" aria-hidden="true">♨</div><h3>Góc bếp nhỏ</h3><p>Nấu ăn là một niềm vui giản dị. Và nếu phải chọn một nguyên liệu yêu thích, câu trả lời của tôi là: trứng!</p></article>
+      </div>
+      <p class="muted reveal" style="margin-top:18px;font-size:.9rem">Một chút bí ẩn, một chút sáng tạo — và đôi khi là màn “farm bá khí” chỉ để vui thôi.</p>
+    </div>
+  </section>
+  <section class="chapter" id="projects">
+    <div class="wrap">
+      <div class="chapter-head reveal"><div class="chapter-number">03</div><div><div class="chapter-kicker">Những thứ tôi đang xây dựng</div><h2>Ý tưởng thành hình</h2><p class="lead">Tôi thích biến ý tưởng thành thứ có thể trải nghiệm, thử nghiệm và tiếp tục cải thiện. Đây là những hướng sáng tạo đang được khám phá.</p></div></div>
+      <div class="project-grid">
+        <article class="panel project reveal"><div class="project-top"><div class="project-icon" aria-hidden="true">⌘</div><span class="status">Website</span></div><h3>Học Có Chiến Lược</h3><p>Một cẩm nang học tập dành cho học sinh THPT, hướng đến phương pháp học hiệu quả và những công cụ hỗ trợ việc tự học.</p><a class="project-link" href="https://tankongu.github.io/M-t-t-B-t/" target="_blank" rel="noopener noreferrer">Khám phá website <span aria-hidden="true">↗</span></a></article>
+        <article class="panel project reveal delay-1"><div class="project-top"><div class="project-icon" aria-hidden="true">✧</div><span class="status">Thiết kế trò chơi</span></div><h3>Thế giới trò chơi do tôi thiết kế</h3><p>Tôi quan tâm đến việc xây dựng luật chơi, thử thách, hệ thống tiến triển và những lựa chọn khiến mỗi trải nghiệm trở nên khác biệt.</p><span class="project-link">Đang phát triển ý tưởng <span aria-hidden="true">↗</span></span></article>
+        <article class="panel project reveal"><div class="project-top"><div class="project-icon" aria-hidden="true">⌁</div><span class="status">Công nghệ</span></div><h3>Khám phá Arduino</h3><p>Bước đầu tìm hiểu Arduino và cách kết hợp linh kiện để tạo nên những mô hình có thể tương tác với thế giới thực.</p><span class="project-link">Kiến thức cơ bản · Đang học</span></article>
+        <article class="panel project reveal delay-1"><div class="project-top"><div class="project-icon" aria-hidden="true">＋</div><span class="status">Chương chưa viết</span></div><h3>Ý tưởng tiếp theo</h3><p>Không phải dự án nào cũng cần có sẵn câu trả lời. Khu vực này dành cho những điều tôi sẽ học, thử nghiệm và hoàn thiện trong tương lai.</p><span class="project-link">Còn tiếp…</span></article>
+      </div>
+      <p class="muted reveal" style="font-size:.82rem;margin-top:16px">Các mục mô tả hướng sáng tạo có thể được cập nhật khi dự án hoàn thiện; không phải tất cả đều là sản phẩm đã phát hành.</p>
+    </div>
+  </section>
+  <section class="chapter" id="journey">
+    <div class="wrap">
+      <div class="chapter-head reveal"><div class="chapter-number">04</div><div><div class="chapter-kicker">Hành trình trưởng thành</div><h2>Học hỏi, thử nghiệm, tiến lên</h2><p class="lead">Tôi đang ở giai đoạn tích lũy kiến thức, khám phá điều mình phù hợp và học cách biến sự tò mò thành năng lực thực tế.</p></div></div>
+      <div class="study-grid">
+        <article class="study-item reveal"><h3>Những điều tôi quan tâm</h3><p>Giáo dục kinh tế và pháp luật, Vật lí — hai lĩnh vực giúp tôi nhìn thế giới từ những góc độ khác nhau.</p></article>
+        <article class="study-item reveal delay-1"><h3>Công nghệ tôi đang học</h3><p>Arduino ở mức cơ bản; từng bước làm quen với việc kết nối phần cứng và biến ý tưởng thành mô hình.</p></article>
+        <article class="study-item reveal delay-2"><h3>Định hướng tương lai</h3><p>Quản trị kinh doanh là lĩnh vực tôi đang hướng đến, song song với mục tiêu đạt thành tích tốt trong học tập.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="chapter" id="next">
+    <div class="wrap">
+      <div class="goal reveal"><div class="eyebrow">Chương 05 · Trang sách tiếp theo</div><h2>Tôi vẫn đang viết tiếp câu chuyện của mình.</h2><p>Mục tiêu trước mắt là học tập thật tốt, tiếp tục sáng tạo và không ngừng mở rộng những điều mình có thể làm. Hành trình này chưa hoàn tất — và đó chính là điều khiến nó đáng mong chờ.</p><div class="hero-actions"><a class="button primary" href="https://github.com/Tankongu" target="_blank" rel="noopener noreferrer">Ghé thăm GitHub <span aria-hidden="true">↗</span></a><a class="button" href="#top">Đọc lại từ đầu ↑</a></div></div>
+    </div>
+  </section>
 </main>
-<footer class="wrap"><span>© <span id="year"></span> Ngày Tình Phôi Phai</span><span>Được tạo bằng sự tò mò và một chút sáng tạo ✦</span></footer>
+<footer class="footer"><div class="wrap footer-inner"><span>© <span id="year"></span> Tankongu · Một trang sách mới.</span><a href="https://github.com/Tankongu" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer>
 <script>
-document.getElementById('year').textContent=new Date().getFullYear();
-const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const items=document.querySelectorAll('.reveal');
-if(reduce||!('IntersectionObserver' in window)){items.forEach(el=>el.classList.add('visible'))}
-else{const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});items.forEach(el=>observer.observe(el))}
+(function(){
+  const year=document.getElementById('year');
+  if(year) year.textContent=new Date().getFullYear();
+  const menuButton=document.querySelector('.menu-button');
+  const nav=document.getElementById('navlinks');
+  if(menuButton&&nav){
+    menuButton.addEventListener('click',function(){
+      const open=nav.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded',String(open));
+    });
+    nav.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');});});
+  }
+  const items=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    items.forEach(function(item){item.classList.add('visible');});
+    return;
+  }
+  const observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -25px 0px'});
+  items.forEach(function(item){observer.observe(item);});
+})();
 </script>
 </body>
 </html>
