@@ -90,6 +90,33 @@ h2{font-size:clamp(2rem,4.6vw,3.7rem);line-height:1.15;letter-spacing:-.025em;ma
 
 .delay-1{transition-delay:.1s}.delay-2{transition-delay:.18s}.delay-3{transition-delay:.26s}
 @keyframes halo{from{transform:scale(.96);opacity:.55}to{transform:scale(1.04);opacity:1}}
+
+/* Global typography: ưu tiên độ rõ và khả năng đọc tiếng Việt */
+body{font-family:Arial,"Segoe UI",ui-sans-serif,system-ui,sans-serif;font-size:17px;line-height:1.8;letter-spacing:0;color:var(--text)}
+p,li{line-height:1.8}
+.muted,.lead,.hero-copy,.interest p,.project p,.study-item p{color:#d0c7df}
+.navlinks{font-size:.98rem}
+.brand{font-size:.88rem;letter-spacing:.09em}
+.eyebrow{font-size:.82rem;letter-spacing:.16em}
+.chapter-kicker{font-size:.82rem;letter-spacing:.13em}
+.scroll-note{font-size:.8rem;letter-spacing:.09em}
+.lead{font-size:1.08rem;line-height:1.85}
+.panel h3,.project h3,.study-item h3{font-family:Arial,"Segoe UI",ui-sans-serif,system-ui,sans-serif;line-height:1.4}
+.interest h3{font-family:Georgia,"Times New Roman",serif;line-height:1.35}
+.pill{font-size:.9rem;color:#e4dcef}
+.status{font-size:.8rem}
+.project-link{font-size:.98rem}
+.study-item p{font-size:.98rem}
+.footer{font-size:.9rem;color:#b9aecb}
+.sequence-reset{font-size:.95rem}
+@media(max-width:760px){
+  body{font-size:16.5px}
+  .brand{font-size:.82rem}
+  .chapter-kicker{font-size:.78rem}
+  .hero-copy,.lead{font-size:1rem}
+  .pill{font-size:.88rem}
+}
+
 @media(max-width:760px){.nav-inner{min-height:64px}.menu-button{display:block}.navlinks{display:none;position:absolute;left:20px;right:20px;top:58px;padding:16px;background:#211a30f5;border:1px solid var(--line);border-radius:16px;flex-direction:column;gap:12px}.navlinks.open{display:flex}.hero{min-height:78svh;padding:78px 0 90px}.hero:after{transform:translate(120px,-115px)}.chapter{padding:72px 0}.chapter-head{grid-template-columns:54px 1fr;gap:13px}.chapter-number{font-size:1.8rem}.about-grid{grid-template-columns:1fr}.interest-grid{grid-template-columns:1fr}.interest{min-height:auto}.interest .symbol{margin-bottom:12px}.project-grid{grid-template-columns:1fr}.study-grid{grid-template-columns:1fr}.scroll-note{bottom:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 </style>
