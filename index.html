@@ -82,6 +82,12 @@ h2{font-size:clamp(2rem,4.6vw,3.7rem);line-height:1.15;letter-spacing:-.025em;ma
 .footer a{color:var(--muted)}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
+.about-sequence-item{opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease;will-change:opacity,transform}
+.about-sequence-item.is-shown{opacity:1;transform:translateY(0);will-change:auto}
+.sequence-controls{display:flex;justify-content:flex-end;margin:-18px 0 18px}
+.sequence-reset{border:1px solid var(--line);border-radius:999px;background:#ffffff05;color:var(--muted);padding:8px 14px;font-size:.88rem;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.sequence-reset:hover,.sequence-reset:focus-visible{border-color:var(--lilac);color:var(--text);background:#c6b4f414}
+
 .delay-1{transition-delay:.1s}.delay-2{transition-delay:.18s}.delay-3{transition-delay:.26s}
 @keyframes halo{from{transform:scale(.96);opacity:.55}to{transform:scale(1.04);opacity:1}}
 @media(max-width:760px){.nav-inner{min-height:64px}.menu-button{display:block}.navlinks{display:none;position:absolute;left:20px;right:20px;top:58px;padding:16px;background:#211a30f5;border:1px solid var(--line);border-radius:16px;flex-direction:column;gap:12px}.navlinks.open{display:flex}.hero{min-height:78svh;padding:78px 0 90px}.hero:after{transform:translate(120px,-115px)}.chapter{padding:72px 0}.chapter-head{grid-template-columns:54px 1fr;gap:13px}.chapter-number{font-size:1.8rem}.about-grid{grid-template-columns:1fr}.interest-grid{grid-template-columns:1fr}.interest{min-height:auto}.interest .symbol{margin-bottom:12px}.project-grid{grid-template-columns:1fr}.study-grid{grid-template-columns:1fr}.scroll-note{bottom:18px}}
@@ -110,10 +116,11 @@ h2{font-size:clamp(2rem,4.6vw,3.7rem);line-height:1.15;letter-spacing:-.025em;ma
   </section>
   <section class="chapter" id="about">
     <div class="wrap">
-      <div class="chapter-head reveal"><div class="chapter-number">01</div><div><div class="chapter-kicker">Người viết trang sách</div><h2>Tôi là ai?</h2><p class="lead">Một học sinh đang khám phá bản thân, nuôi dưỡng ý tưởng và từng bước xây dựng con đường của riêng mình.</p></div></div>
+      <div class="chapter-head about-sequence-item"><div class="chapter-number">01</div><div><div class="chapter-kicker">Người viết trang sách</div><h2>Tôi là ai?</h2><p class="lead">Một học sinh đang khám phá bản thân, nuôi dưỡng ý tưởng và từng bước xây dựng con đường của riêng mình.</p></div></div>
+      <div class="sequence-controls"><button class="sequence-reset" id="about-reset" type="button">↻ Đặt lại hiệu ứng</button></div>
       <div class="about-grid">
-        <article class="panel reveal"><div class="chapter-kicker">Tên trên trang sách</div><h3 style="font-size:clamp(1.8rem,4vw,2.8rem);margin-top:8px">Trần Nguyễn Minh Tân</h3><p class="muted">Bạn có thể gọi tôi là Mít tơ Bít, Tankongu hoặc Tân 1 Cú. Tôi thích giữ cho mình một chút bí ẩn, nhưng vẫn luôn sẵn sàng tìm hiểu điều mới và thử sức với những ý tưởng thú vị.</p><div class="pills"><span class="pill">Vui vẻ</span><span class="pill">Hòa nhã</span><span class="pill">Sáng tạo</span><span class="pill">Nhường nhịn</span><span class="pill">Thâm sâu khó lường</span></div></article>
-        <article class="panel reveal delay-1"><div class="chapter-kicker">Điều tôi tin</div><div class="big-quote">“Mỗi khó khăn đều có thể mở ra một trang sách mới.”</div><p class="muted">Với tôi, những điều không như ý có thể trở thành chất liệu cho sự trưởng thành. Điều quan trọng không chỉ là những gì đã xảy ra, mà còn là cách ta chọn viết tiếp câu chuyện của mình.</p></article>
+        <article class="panel about-sequence-item"><div class="chapter-kicker">Tên trên trang sách</div><h3 style="font-size:clamp(1.8rem,4vw,2.8rem);margin-top:8px">Trần Nguyễn Minh Tân</h3><p class="muted">Bạn có thể gọi tôi là Mít tơ Bít, Tankongu hoặc Tân 1 Cú. Tôi thích giữ cho mình một chút bí ẩn, nhưng vẫn luôn sẵn sàng tìm hiểu điều mới và thử sức với những ý tưởng thú vị.</p><div class="pills"><span class="pill">Vui vẻ</span><span class="pill">Hòa nhã</span><span class="pill">Sáng tạo</span><span class="pill">Nhường nhịn</span><span class="pill">Thâm sâu khó lường</span></div></article>
+        <article class="panel about-sequence-item"><div class="chapter-kicker">Điều tôi tin</div><div class="big-quote">“Mỗi khó khăn đều có thể mở ra một trang sách mới.”</div><p class="muted">Với tôi, những điều không như ý có thể trở thành chất liệu cho sự trưởng thành. Điều quan trọng không chỉ là những gì đã xảy ra, mà còn là cách ta chọn viết tiếp câu chuyện của mình.</p></article>
       </div>
     </div>
   </section>
@@ -170,17 +177,80 @@ h2{font-size:clamp(2rem,4.6vw,3.7rem);line-height:1.15;letter-spacing:-.025em;ma
     });
     nav.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');});});
   }
+
   const items=document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(!('IntersectionObserver' in window)||reducedMotion.matches){
     items.forEach(function(item){item.classList.add('visible');});
+  }else{
+    const observer=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}
+      });
+    },{threshold:0.12,rootMargin:'0px 0px -25px 0px'});
+    items.forEach(function(item){observer.observe(item);});
+  }
+
+  const about=document.getElementById('about');
+  const sequenceItems=about?Array.from(about.querySelectorAll('.about-sequence-item')):[];
+  const resetButton=document.getElementById('about-reset');
+  if(!about||!sequenceItems.length||!('IntersectionObserver' in window)){
+    sequenceItems.forEach(function(item){item.classList.add('is-shown');});
     return;
   }
-  const observer=new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}
+  const pending=new Map();
+  const shown=new Set();
+  let inView=false;
+  let hasStarted=false;
+  const showImmediately=function(){
+    pending.forEach(function(timer){clearTimeout(timer);});
+    pending.clear();
+    sequenceItems.forEach(function(item){item.classList.add('is-shown');shown.add(item);});
+    hasStarted=true;
+  };
+  const cancelPending=function(){
+    pending.forEach(function(timer){clearTimeout(timer);});
+    pending.clear();
+  };
+  const runSequence=function(){
+    if(reducedMotion.matches){showImmediately();return;}
+    sequenceItems.forEach(function(item,index){
+      if(shown.has(item)||pending.has(item))return;
+      const timer=setTimeout(function(){
+        pending.delete(item);
+        if(!inView)return;
+        item.classList.add('is-shown');
+        shown.add(item);
+      },index*200);
+      pending.set(item,timer);
     });
-  },{threshold:0.12,rootMargin:'0px 0px -25px 0px'});
-  items.forEach(function(item){observer.observe(item);});
+    hasStarted=true;
+  };
+  const sectionObserver=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      inView=entry.isIntersecting;
+      if(inView){
+        if(!hasStarted||shown.size<sequenceItems.length)runSequence();
+      }else{
+        cancelPending();
+      }
+    });
+  },{threshold:0.15});
+  sectionObserver.observe(about);
+  if(reducedMotion.addEventListener){
+    reducedMotion.addEventListener('change',function(event){
+      if(event.matches)showImmediately();
+    });
+  }
+  if(resetButton){
+    resetButton.addEventListener('click',function(){
+      cancelPending();
+      shown.clear();
+      hasStarted=false;
+      sequenceItems.forEach(function(item){item.classList.remove('is-shown');});
+      if(inView)runSequence();
+    });
+  }
 })();
 </script>
 </body>
